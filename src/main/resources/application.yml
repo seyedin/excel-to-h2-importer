@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:excelimportdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update   # ساخت و به‌روزرسانی جداول بر اساس entity ها
+    show-sql: true       # نمایش کوئری‌ها در کنسول برای دیباگ
+    properties:
+      hibernate:
+        format_sql: true # فرمت بهتر کوئری‌ها در خروجی
+  h2:
+    console:
+      enabled: true      # فعال کردن کنسول وب H2 برای مشاهده دیتابیس
+      path: /h2-console  # مسیر دسترسی به کنسول (مثلا http://localhost:8080/h2-console)
+
+server:
+  port: 8080            # پورت پیش‌فرض سرور Spring Boot
